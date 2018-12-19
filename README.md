@@ -33,6 +33,11 @@ You should also set up your email variable by adding the following line to your 
 export JOB_MAIL=your@email.com
 ```
 
+Make sure you are in your scratch space:
+
+```
+cd ~/scratch
+```
 
 You should run RNAseq_pipeline.sh with the following arguments
 
