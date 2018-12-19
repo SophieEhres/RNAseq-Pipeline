@@ -80,4 +80,6 @@ for i in $(ls *.fastq.gz); do echo $i >> samples.txt; done
 
 Universal Illumina adapters are located in the adapters.txt file. If you want to use different adapters, make a .txt files containing one adapter per line. 
 
-If any setting need to be changed for the pipeline (i.e. when an error occurs), settings can be modified by creating a .ini file containing the setting to be changed. The ini file then needs to be added to RNAseq_preparation.sh as the last ini file called by the pipeline, as the newest ini file called overwrites the settings set by the previous ini file. 
+If any settings need to be changed for the pipeline (i.e. when an error occurs), settings can be modified by creating a .ini file containing the setting to be changed. The ini file then needs to be added to RNAseq_preparation.sh as the last ini file called by the pipeline, as the newest ini file called overwrites the settings set by the previous ini file. 
+
+Questions and comments can be adressed to : campeaupipelines@gmail.com
