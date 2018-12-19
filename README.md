@@ -40,12 +40,7 @@ You should run RNAseq_pipeline.sh with the following arguments
 2. The word SINGLE or PAIRED according to your run type
 3. The sequence for the adapters (the file adapters.txt containing the usual adapters is provided in the folder)
 4. The directory in which you want to work
-5. The name of the genome you want to align to. Supported genomes are:
-- hg19
-- GRCh37, 38
-
-- mm10
-- GRCm38
+5. The name of the genome you want to align to. Examples are: hg19, GRCh38, mm10, GRCm38
 
 
 example:
