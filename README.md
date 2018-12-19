@@ -56,13 +56,13 @@ bash RNAseq_pipeline.sh paired_end_fastq.txt PAIRED adapters.txt /home/jimd/scra
 ### Additionnal notes
 If you have more than one fastq file per sample, merge them using cat <FASTQ1> <FASTQ2> > merged_fastq.gz
 
-Go to the directory where the FASTQ files are:
+Go to the directory where the FASTQ files are and merge them:
 
 ```
 for i in $(ls *.fastq.gz | cut -d '_' -f1 | uniq) ; do cat `ls | grep $i`  >merged_$i.fastq.gz; done
 ```
 
-Then delete non-merged files
+Then delete non-merged files:
 
 ```
 rm `ls *.fastq.gz | grep -v "merged"`
