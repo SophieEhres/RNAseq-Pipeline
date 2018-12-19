@@ -59,17 +59,17 @@ If you have more than one fastq file per sample, merge them using cat <FASTQ1> <
 Go to the directory where the FASTQ files are:
 
 ```
-for i in $(ls *.gz | cut -d '_' -f1 | uniq) ; do cat `ls | grep $i`  >merged_$i.fastq.gz; done
+for i in $(ls *.fastq.gz | cut -d '_' -f1 | uniq) ; do cat `ls | grep $i`  >merged_$i.fastq.gz; done
 ```
 
 Then delete non-merged files
 
 ```
-rm `ls *.gz | grep -v "merged"`
+rm `ls *.fastq.gz | grep -v "merged"`
 ```
 
 To get a list of all samples do, when in the directory with the fastqs:
 
 ```
-for i in $(ls *.gz); do echo $i >> samples.txt; done
+for i in $(ls *.fastq.gz); do echo $i >> samples.txt; done
 ```
