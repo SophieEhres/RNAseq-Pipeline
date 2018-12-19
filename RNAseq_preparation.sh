@@ -18,7 +18,6 @@ mysteps="1-15"
 analysistype="analysis" #analysis or report
 myoutputdir="${dir0}/RNAseq_Pipeline_output"
 myreadset="${dir0}/readset.txt"
-mydesign="${dir0}/design.txt"
 #
 #
 dirpipe=$MUGQIC_INSTALL_HOME/software/genpipes/genpipes-3.1.0/pipelines/"$typepipe"
@@ -29,7 +28,7 @@ module load python/$versionpython
 
 echo "Generating command files for analysis"
 
-python $dirpipe/$typepipe.py -f -c $dirpipe/$typepipe.base.ini $dirpipe/$typepipe.cedar.ini $dirgenome/$genome.ini oct_2018_config.ini -s $mysteps -o $myoutputdir -r $myreadset -d $mydesign -j slurm > run_step_$mysteps.sh
+python $dirpipe/$typepipe.py -f -c $dirpipe/$typepipe.base.ini $dirpipe/$typepipe.cedar.ini $dirgenome/$genome.ini oct_2018_config.ini -s $mysteps -o $myoutputdir -r $myreadset -j slurm > run_step_$mysteps.sh
 
 echo "Pipeline_preparation completed, bash run_step_1-15.sh to start"
 
