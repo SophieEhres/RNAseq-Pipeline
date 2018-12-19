@@ -54,6 +54,9 @@ bash RNAseq_pipeline.sh paired_end_fastq.txt PAIRED adapters.txt /home/jimd/scra
 ```
 
 ### Additionnal notes
+
+If you want to work in the directory you are currently in, just write $(pwd) in the directory option.
+
 If you have more than one fastq file per sample, merge them into one merged file using the following code.
 
 Go to the directory where the FASTQ files are and merge them:
